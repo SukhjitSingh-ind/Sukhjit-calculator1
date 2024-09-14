@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('main.jpg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.calculator {
+    border-radius: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    backdrop-filter: blur(10px); /* Apply the 10px blur */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    color: black;
+}
+
+input {
+    border: none;
+    width: 100%; /* Input width matches calculator width */
+    height: 3rem; /* Increased height for better visibility */
+    background-color: transparent;
+    text-align: right;
+    color: black;
+    padding: 24px;
+    margin-bottom: 20px; /* Adjusted margin for better spacing */
+    font-size: 2.5rem;
+    border-bottom: 2px solid black;
+}
+
+input::placeholder {
+    color: black;
+}
+
+button {
+    border: none;
+    border-radius: 12px; /* Changed from circular to rounded rectangles */
+    width: 4rem;
+    height: 4rem;
+    margin: 10px; /* Reduced margin for better spacing */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background color */
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight change on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+button:active {
+    transform: scale(0.95); /* Button pressed effect */
+    box-shadow: none; /* Remove shadow on click */
+}
+
+.operator {
+    color: black;
+}
+
+.equal-btn {
+    background: rgba(255, 255, 255, 0.2); /* Match calculator background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border for definition */
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.equal-btn:hover {
+    background: rgba(255, 255, 255, 0.4); /* Highlighted when hovered */
+    cursor: pointer;
+}
+
+/* Make buttons aligned in a grid-like format */
+.calculator div {
+    display: flex;
+    justify-content: space-between;
+}
